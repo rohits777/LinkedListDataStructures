@@ -23,6 +23,20 @@ public class LinkedList {
         newNode.next=head;
         head= newNode;
     }
+    //adding data to last ..
+    public void addLast(String data){
+        Node newNode= new Node(data);
+        if (head==null){
+            head=newNode;
+            return;
+        }
+        Node tempNode= head;
+        while(tempNode.next !=null){
+            tempNode=tempNode.next;
+        }
+        tempNode.next=newNode;
+    }
+    //printing linked list..
     public void printNode(){
         if(head==null){
             System.out.println("Linked list is empty:");
