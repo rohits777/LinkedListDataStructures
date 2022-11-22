@@ -25,12 +25,12 @@ public class LinkedList {
     }
     public void printNode(){
         if(head==null){
-            System.out.println("Linked list is empty");
+            System.out.println("Linked list is empty:");
         return;
         }
         Node tempNode=head;
         while (tempNode!=null){
-            System.out.println("=>" +tempNode.data);
+            System.out.println("=> " +tempNode.data);
             tempNode=tempNode.next;
         }
         System.out.println("null");
