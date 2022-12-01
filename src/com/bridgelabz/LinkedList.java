@@ -153,13 +153,12 @@ public class LinkedList {
         System.out.println("----Welcome to the linked list program-----");
     LinkedList obj= new LinkedList();
 
-    obj.add("56");
-    obj.add("30");
     obj.add("70");
-    obj.insertIndex(2,"secondIndex:");
-    obj.deleteFirst();
-    obj.deleteLast();
-    obj.Search("30");
+    obj.add("30");
+    obj.add("56");
+//    obj.deleteFirst();
+//    obj.deleteLast()
+    obj.insertIndex(2,"40");
     obj.printNode();
     }
 }
