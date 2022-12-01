@@ -147,6 +147,21 @@ public class LinkedList {
             System.out.println(" THe data is not present");
         }
     }
+    //delete element
+    public void delete(Object data) {
+        Node temp = head, prev =null;
+        if (temp != null && temp.data == data) {
+            head = temp.next;
+            return;
+        }
+        while (temp != null && temp.data !=data) {
+            prev= temp;
+            temp = temp.next;
+        }
+        if(temp == null)
+            return;
+        prev.next=temp.next;
+    }
 
 
     public static void main(String[] args) {
@@ -159,6 +174,7 @@ public class LinkedList {
 //    obj.deleteFirst();
 //    obj.deleteLast()
     obj.insertIndex(2,"40");
+    obj.delete("40");
     obj.printNode();
     }
 }
