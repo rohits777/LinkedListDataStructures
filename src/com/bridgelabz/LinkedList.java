@@ -63,27 +63,27 @@ public class LinkedList {
     public void insertIndex(int userIndex, String data) {
         LinkedList obj1 = new LinkedList();
 
-        // User trying to insert a first position
+        // User  insert a first position
         if (userIndex == 0)
             obj1.add(data);
 
-            // User trying to insert a last position
+            // User insert a last position
         else if (userIndex == size())
             obj1.addLast(data);
 
-            // User trying to insert a invalid position
+            // User insert invalid position
         else if (userIndex < 0 || userIndex >= size())
             System.out.println("Invalid index");
 
-            // User trying to insert a specific index
+            // User insert specific index
         else {
             // Creating New Node
             Node newNode = new Node(data);
 
-            // To track traversing
+            //  track traversing
             int index = 0;
 
-            // Pointers to track left & right side elements
+            // Pointers track left & right side elements
             Node left = head;
             Node right = left.next;
 
@@ -100,6 +100,15 @@ public class LinkedList {
             left.next = newNode;
         }
     }
+    // Delete first element
+    public void deleteFirst(){
+        if(head == null){
+            System.out.println(" the list is empty");
+            return;
+        }
+        head = head.next;
+    }
+
     public static void main(String[] args) {
         System.out.println("----Welcome to the linked list program-----");
     LinkedList obj= new LinkedList();
@@ -108,6 +117,7 @@ public class LinkedList {
     obj.add("30");
     obj.add("70");
     obj.insertIndex(2,"secondIndex:");
+    obj.deleteFirst();
     obj.printNode();
     }
 }
