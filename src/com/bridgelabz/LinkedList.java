@@ -108,6 +108,25 @@ public class LinkedList {
         }
         head = head.next;
     }
+    // delete last element
+    public void deleteLast(){
+        if(head == null){
+            System.out.println(" the list is empty");
+            return;
+        }
+        if(head.next == null){
+            head= null;
+            return;
+        }
+        Node secoundLast = head;
+        Node lastNode = head.next;
+        while(lastNode.next != null){
+            lastNode = lastNode.next;
+            secoundLast = secoundLast.next;
+        }
+        secoundLast.next= null;
+    }
+
 
     public static void main(String[] args) {
         System.out.println("----Welcome to the linked list program-----");
@@ -118,6 +137,7 @@ public class LinkedList {
     obj.add("70");
     obj.insertIndex(2,"secondIndex:");
     obj.deleteFirst();
+    obj.deleteLast();
     obj.printNode();
     }
 }
