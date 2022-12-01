@@ -126,6 +126,27 @@ public class LinkedList {
         }
         secoundLast.next= null;
     }
+    // search element
+    public void Search(String Data1) {
+        if (head == null) {                                  // Checking f head  empty or not
+            System.out.println("Linked list is empty...");
+            return;
+        }
+        int check = 0;
+        Node tempNode = head;
+        while (tempNode != null) {
+            check++;
+            if (tempNode.data == Data1) {
+                System.out.println("data present  " + tempNode.data + " at " + check);
+                break;
+            }else {
+                tempNode = tempNode.next;
+            }
+        }
+        if (tempNode == null){
+            System.out.println(" THe data is not present");
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -138,6 +159,7 @@ public class LinkedList {
     obj.insertIndex(2,"secondIndex:");
     obj.deleteFirst();
     obj.deleteLast();
+    obj.Search("30");
     obj.printNode();
     }
 }
